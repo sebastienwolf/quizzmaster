@@ -29,6 +29,32 @@ let theme = [{
         reponse: ["1", "2", "3", "4"],
         answer: "2"
     },
+    // nouveau theme cinema
+    {
+        nbth: "cinema",
+        questions: "cinq",
+        reponse: ["1", "2", "3", "4"],
+        answer: "2"
+    },
+    {
+        nbth: "cinema",
+        questions: "huit",
+        reponse: ["1", "2", "3", "4"],
+        answer: "2"
+    },
+    {
+        nbth: "cinema",
+        questions: "sept",
+        reponse: ["1", "2", "3", "4"],
+        answer: "2"
+    },
+    {
+        nbth: "cinema",
+        questions: "six",
+        reponse: ["1", "2", "3", "4"],
+        answer: "2"
+    },
+    
 ];
 
 // 
@@ -37,16 +63,46 @@ let theme = [{
 let score = 0;
 let bReset = document.getElementById("reset")
 bReset.style.display = 'none'
+let filter = theme.filter(a => a.nbth == 'anime')
 
+// ================================
+
+    Array.from(document.getElementsByClassName('theme')).forEach(z => {
+        z.addEventListener('click', () => {
+        filter = theme.filter(a => a.nbth == z.dataset.info);
+         Quizz()
+        })
+    });
+// console.log("theme", z.dataset.info)
+
+// ================================
 
 // test de consol pour voir le tableau qui correspond à anime
-let filter = theme.filter(a => a.nbth === "anime");
-console.log("theme", filter);
+
+// let filter = theme.filter(a => a.nbth === "anime");
+// console.log("theme", filter);
+
+// // // test de consol pour voir le tableau qui correspond à cinema
+//  let filter = theme.filter(a => a.nbth === "cinema");
+//  console.log("cinema", filter);
+
 
 // quand on click sur le bouton ça va chercher notre function quizz
-document.getElementById("theme").addEventListener('click', () => {
-    Quizz();
-});
+// document.getElementById("anime").addEventListener('click', () => {
+//     Quizz();
+// });
+// document.getElementById("tech").addEventListener('click', () => {
+//     Quizz();
+// });
+// document.getElementById("gaming").addEventListener('click', () => {
+//     Quizz();
+// });
+
+
+// quand on click sur le bouton ça va chercher notre function quizz
+// document.getElementById("cinema").addEventListener('click', () => {
+//     Quizz();
+// });
 
 // vérification du résultat
 // on prend toutes les classe "c" vu qu'il y a plusieur élément cela ce met dans un tableau d'ou le array.from
@@ -54,8 +110,8 @@ document.getElementById("theme").addEventListener('click', () => {
 // "y" est l'endroit ou clique qu'on met en nom de la function
 Array.from(document.getElementsByClassName('c')).forEach(y => {
     y.addEventListener('click', () => {
-        // dataset.number sert a récuperet le datanumber de la classe 'c'
-        if (y.dataset.number == theme[x].answer) {
+        // dataset.number sert a récuperer le datanumber de la classe 'c'
+        if (y.dataset.number == filter[x].answer) {
             score += 1
             console.log(true)
             Quizz()
@@ -80,13 +136,13 @@ function Quizz() {
     console.log("question aleatoire", x);
 
     // transformation du <p> par la valeur du tableau question en fonction du random
-    document.getElementById("question").innerHTML = theme[x].questions;
+    document.getElementById("question").innerHTML = filter[x].questions;
 
     // mise en place des reponse sur les puces
-    document.getElementById("r1").innerHTML = theme[x].reponse[0];
-    document.getElementById("r2").innerHTML = theme[x].reponse[1];
-    document.getElementById("r3").innerHTML = theme[x].reponse[2];
-    document.getElementById("r4").innerHTML = theme[x].reponse[3];
+    document.getElementById("r1").innerHTML = filter[x].reponse[0];
+    document.getElementById("r2").innerHTML = filter[x].reponse[1];
+    document.getElementById("r3").innerHTML = filter[x].reponse[2];
+    document.getElementById("r4").innerHTML = filter[x].reponse[3];
     page += 1;
 
 
@@ -117,7 +173,7 @@ function reset() {
 
 
 }
-
+        
 // =================================================
 
 // } // fin for
