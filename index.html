@@ -11,18 +11,28 @@
     <title>Quizz</title>
 </head>
 
-<body>
+<body class="quizz">
 
 
-    </div>
-    <div class="quizz" id="quizz">
 
-        <button id="anime" class="theme" data-info="anime">Anime</button>
-        <button id="gaming" class="theme" data-info="gaming">Gaming</button>
-        <button id="cinema" class="theme" data-info="cinema">Cinema</button>
-        <button id="tech" class="theme" data-info="tech">Tech</button>
+    <!-- <div class="quizz" id="quizz"> -->
+    <header class="header">
+        <div>
+            <h1>MASTER QUIZZ</h1>
+        </div>
+        <div>
+            <p>Veuillez sélectionner votre thème</p>
+        </div>
+        <div id="selectTheme">
+            <button id="anime" class="theme" data-info="anime">Anime</button>
+            <button id="gaming" class="theme" data-info="gaming">Gaming</button>
+            <button id="cinema" class="theme" data-info="cinema">Cinema</button>
+            <button id="tech" class="theme" data-info="tech">Tech</button>
+        </div>
+    </header>
+
+    <div id="selectAnswer">
         <p class="question" id="question">How many times did u today?</p>
-
 
         <button class='c' id="r1" data-number="0">
             <p>aaaa</p>
@@ -37,16 +47,15 @@
             <p>dddd</p>
         </button>
 
-    </div>
-    <div id="bResult">
+
+
         <p>page : <span id="pRun">0</span> /<span id="pMax">10</span></p>
-
-
-        <p id="resultat"></p>
-        <button id="reset">RESET</button>
+        <div id="reset">
+            <p id="resultat"></p>
+            <button id="rat">RESET</button>
+        </div>
     </div>
 
-    </div>
 
     <script src="./script.js"></script>
 </body>

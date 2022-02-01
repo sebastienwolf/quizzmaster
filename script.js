@@ -164,6 +164,9 @@ let page = 0;
 let score = 0;
 let bReset = document.getElementById("reset")
 bReset.style.display = 'none'
+let blocAnswer = document.getElementById("selectAnswer")
+blocAnswer.style.display = 'none'
+
 let filter = theme.filter(a => a.nbth == 'anime')
 let questionSet = ['0','1','2','3','4','5']
 let X; 
@@ -173,6 +176,7 @@ let bResult = document.getElementById("bResult")
 Array.from(document.getElementsByClassName('theme')).forEach(z => {
     z.addEventListener('click', () => {
         filter = theme.filter(a => a.nbth == z.dataset.info);
+        blocAnswer.style.display = 'flex'
         Quizz()
     })
 });
@@ -276,4 +280,5 @@ function reset() {
     document.getElementById("resultat").innerHTML = score
     questionSet = ['0','1','2','3','4','5']
     bReset.style.display = 'none'
+    blocAnswer.style.display = 'none'
 }
