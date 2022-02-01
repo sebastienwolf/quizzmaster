@@ -1,5 +1,6 @@
 // tableau teste 1
-let theme = [{
+let theme = [
+    {
         nbth: "anime",
         questions: "Où est-ce que Kaneki décide de travailler ?",
         reponse: ["Dans un bar", "Dans un café appelé l’Antique", "Dans un restaurant pour Goule", "À l’université"],
@@ -24,14 +25,14 @@ let theme = [{
         answer: "0"
     },
     {
-        nbth: "Qui emmène Eren au tribunal ? ",
-        questions: "quatre",
+        nbth: "anime",
+        questions: "Qui emmène Eren au tribunal ? ",
         reponse: ["Erwin Smith", "Levy", "Hanzi Zoé", "Mikasa Ackerman"],
         answer: "1"
     },
     {
-        nbth: "Lors du combat final contre Buu buu , Vegeta déclare que ? ",
-        questions: "quatre",
+        nbth: "anime",
+        questions: "Lors du combat final contre Buu buu , Vegeta déclare que ? ",
         reponse: ["Goku est un imbécile", "Goku est le numéro 1", "Goku est le plus gentil des sayan", "Goku est son plus grand rival"],
         answer: "1"
     },
@@ -162,8 +163,12 @@ let page = 0;
 
 // score total
 let score = 0;
+
+//bloc resultat et bouton reset 
 let bReset = document.getElementById("reset")
 bReset.style.display = 'none'
+
+//bloc avec les réponses
 let blocAnswer = document.getElementById("selectAnswer")
 blocAnswer.style.display = 'none'
 
@@ -177,6 +182,7 @@ Array.from(document.getElementsByClassName('theme')).forEach(z => {
     z.addEventListener('click', () => {
         filter = theme.filter(a => a.nbth == z.dataset.info);
         blocAnswer.style.display = 'flex'
+        document.getElementById('blocQuestion').style.display = 'flex'
         Quizz()
     })
 });

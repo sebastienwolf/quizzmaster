@@ -1,6 +1,6 @@
 .quizz {
-    background-color: rgb(54, 54, 53);
-    color: yellow;
+    background-color: #14213d;
+    color: #fca311;
 }
 
 .header {
@@ -26,36 +26,62 @@ h1 {
     margin-left: 30px;
     margin-right: 30px;
     background-color: black;
-    border-bottom: yellow;
-    color: yellow;
+    border: 1px solid #fca311;
+    color: #fca311;
     box-shadow: 10px 5px 5px silver;
     font-weight: bold;
 }
 
 .selectAnswer {
     flex-direction: column;
+    width: 100%;
 
 }
 
-.blocAnswer {
-    background-color: rgba(143, 63, 175, 0.562);
-    border-bottom: yellow;
-    color: yellow;
-    flex-wrap: wrap;
+/* bloc question, reponse */
+#blocQuestion {
+    display: flex;
+    border-bottom: #fca311;
+    color: #fca311;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+
 
 }
 
+/* question */
+.question {
+    font-size: larger;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+/* case reponse */
+.c {
+    width: 500px;
+    height: 100px;
+    margin: 20px;
+    background-color: #000000;
+    color: #fca311;
+    border: 1px solid #fca311;
+
+}
 
 
 #reset {
+    width: 100%;
     flex-direction: column;
+
+    align-items: center;
     width: 100px;
     border-radius: 15%;
 
 }
 
 #rat {
-    border-bottom: rgb(255, 253, 127);
+    border-bottom: #fca311(255, 253, 127);
     border-radius: 50%;
 }
 
