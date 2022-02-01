@@ -1,23 +1,26 @@
-.quizz{
+.quizz {
     background-color: rgb(54, 54, 53);
     color: yellow;
 }
-.header{
+
+.header {
     height: 200px;
     background-color: black;
 }
-h1{
+
+h1 {
     font-weight: bolder;
 }
 
 
-#selectTheme{
+#selectTheme {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
-.theme{
+
+.theme {
     height: 50px;
     width: 100px;
     margin-left: 30px;
@@ -28,24 +31,30 @@ h1{
     box-shadow: 10px 5px 5px silver;
     font-weight: bold;
 }
-.selectAnswer{
+
+.selectAnswer {
     flex-direction: column;
 
 }
 
-.blocAnswer{
+.blocAnswer {
     background-color: rgba(143, 63, 175, 0.562);
     border-bottom: yellow;
     color: yellow;
     flex-wrap: wrap;
+
 }
-#reset{
+
+
+
+#reset {
     flex-direction: column;
     width: 100px;
     border-radius: 15%;
-    
+
 }
-#rat{
+
+#rat {
     border-bottom: rgb(255, 253, 127);
     border-radius: 50%;
 }

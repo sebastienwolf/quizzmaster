@@ -237,6 +237,7 @@ function Quizz() {
         bReset.style.display = 'flex'
         bResult.style.display = 'bloc'
 
+
     }
 
     questionSet.splice(x,1);
@@ -265,6 +266,8 @@ function Quizz() {
     
     if ((page - 1) === pMax) {
         document.getElementById("resultat").innerHTML = score
+        document.getElementById('blocQuestion').style.display = 'none'
+
         bReset.style.display = 'flex'
 
     }
