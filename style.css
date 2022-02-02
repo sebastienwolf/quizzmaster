@@ -3,17 +3,25 @@
     color: #fca311;
 }
 
-.header {
-    height: 200px;
+.header { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
     background-color: black;
 }
-
+.title{
+    margin-bottom: 40px;
+    justify-content: center;
+}
 h1 {
     font-weight: bolder;
 }
 
 
 #selectTheme {
+    margin-top: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +31,8 @@ h1 {
 .theme {
     height: 50px;
     width: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
     background-color: black;
     border: 1px solid #fca311;
     color: #fca311;
@@ -33,8 +41,8 @@ h1 {
 }
 
 .selectAnswer {
+    display: flex;
     flex-direction: column;
-    width: 100%;
 
 }
 
@@ -69,97 +77,44 @@ h1 {
 
 }
 
-
+/* bloc résultat placement */
 #reset {
     width: 100%;
+    margin-top: 100px;
     flex-direction: column;
-
     align-items: center;
-    width: 100px;
+    justify-content: center;
     border-radius: 15%;
 
 }
-
+/* taille du texte résultat */
+#reset p{
+    font-size: larger;
+    font-weight: bold;
+}
+/* bouton résultat */
 #rat {
-    border-bottom: #fca311(255, 253, 127);
-    border-radius: 50%;
-}
-
-
-
-
-/* .quizz{
-    
-    display: none;
-} 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-.topBar{
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 60px;
-    width: 100%;
+    height: 50px;
+    width: 100px;
     background-color: black;
+    border: 1px solid #fca311;
+    color: #fca311;
+    font-weight: bold;
+    border-radius: 10%;
+    transition: 0.5
 }
-.pageLogin{
-    position: relative;
+
+#rat:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 10px rgb(255, 255, 255);
+    background-color: rgb(90, 95, 124);
+}
+
+button{
     transition: 0.5s;
 }
-.pageLogin.toDown{
-    transform: translateY(150vh);
+button:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 10px rgb(255, 255, 255);
+    background-color: rgb(90, 95, 124);
 }
-.login{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 300px;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    
-    transition: 1s;
-}
-.login.hidden{
-    transform: translateX(100vw);
-     
- }
-
- 
-  .register{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 300px;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    position: absolute;
-    margin: 0 ;
-    bottom:-50%;
-    transition: 1s;
-  }
-  .register.hidden{
-    transform: translateX(-100vw);
-     
- }
- .pageAjoutQ{
-     position: absolute;
-     bottom:100vh;
-     transition: 0.5s;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-
- }
- .pageAjoutQ.toDown{
-    bottom: 20vh ;
- }
