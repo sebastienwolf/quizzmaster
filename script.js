@@ -217,38 +217,7 @@ bReset.addEventListener('click', () => {
     reset();
 })
 
-// ===================================================
-function Quizz() {
 
-    // math.floor prend un chiffre entier math.random va prendre un chiffre entre 0 et le chiffre défini
-    // cette fonction va permetre de prendre un entier sur un chiffre donner par random
-    x = Math.floor(Math.random() * questionSet.length);
-    console.log("question aleatoire", x);
-
-    // transformation du <p> par la valeur du tableau question en fonction du random
-    document.getElementById("question").innerHTML = filter[questionSet[x]].questions;
-
-    // mise en place des reponse sur les puces
-    document.getElementById("r1").innerHTML = filter[questionSet[x]].reponse[0];
-    document.getElementById("r2").innerHTML = filter[questionSet[x]].reponse[1];
-    document.getElementById("r3").innerHTML = filter[questionSet[x]].reponse[2];
-    document.getElementById("r4").innerHTML = filter[questionSet[x]].reponse[3];
-    page += 1;
-
-    console.log("page", page)
-    document.getElementById("pRun").innerHTML = page
-    document.getElementById("pMax").innerHTML = pMax
-    if ((page - 1) === pMax) {
-        document.getElementById("resultat").innerHTML = score
-        bReset.style.display = 'flex'
-        bResult.style.display = 'bloc'
-
-
-    }
-
-    questionSet.splice(x,1);
-    console.log("question", questionSet);
-}
 // ===================================================
 function Quizz() {
 
