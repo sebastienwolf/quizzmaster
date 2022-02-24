@@ -1,120 +1,103 @@
 .quizz {
-    background-color: #14213d;
-    color: #fca311;
+  background: #14213d;
+  color: #fca311;
 }
 
-.header { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 150px;
-    background-color: black;
-}
-.title{
-    margin-bottom: 40px;
-    justify-content: center;
-}
-h1 {
-    font-weight: bolder;
+#container {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-
-#selectTheme {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.container__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.theme {
-    height: 50px;
-    width: 100px;
-    margin-left: 60px;
-    margin-right: 60px;
-    background-color: black;
-    border: 1px solid #fca311;
-    color: #fca311;
-    box-shadow: 10px 5px 5px silver;
-    font-weight: bold;
+.login {
+  height: 50px;
+  width: 100px;
+  background-color: #000000;
+  border: 1px solid #fca311;
+  color: #fca311;
+  -webkit-box-shadow: 10px 5px 5px silver;
+          box-shadow: 10px 5px 5px silver;
+  border-radius: 15%;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.selectAnswer {
-    display: flex;
-    flex-direction: column;
-
+.login:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 0 10px 10px white;
+          box-shadow: 0 10px 10px white;
+  background-color: #5a5f7c;
 }
 
-/* bloc question, reponse */
-#blocQuestion {
-    display: flex;
-    border-bottom: #fca311;
-    color: #fca311;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-
-
+/* Bordered form */
+form {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #fca311;
+  background: #000000;
+  -webkit-box-shadow: 10px 5px 5px silver;
+          box-shadow: 10px 5px 5px silver;
+  border-radius: 10%;
 }
 
-/* question */
-.question {
-    font-size: larger;
-    font-weight: 900;
-    margin-top: 50px;
+#container h1 {
+  width: 38%;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
-/* case reponse */
-.c {
-    width: 500px;
-    height: 100px;
-    margin: 20px;
-    background-color: #000000;
-    color: #fca311;
-    border: 1px solid #fca311;
-
+/* Full-width inputs */
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #fca311;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/* bloc résultat placement */
-#reset {
-    width: 100%;
-    margin-top: 100px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15%;
-
-}
-/* taille du texte résultat */
-#reset p{
-    font-size: larger;
-    font-weight: bold;
-}
-/* bouton résultat */
-#rat {
-    height: 50px;
-    width: 100px;
-    background-color: black;
-    border: 1px solid #fca311;
-    color: #fca311;
-    font-weight: bold;
-    border-radius: 10%;
-    transition: 0.5
+/* Set a style for all buttons */
+input[type=submit] {
+  background-color: #794400;
+  color: #fca311;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: #fca311 1px solid;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#rat:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 10px 10px rgb(255, 255, 255);
-    background-color: rgb(90, 95, 124);
+input[type=submit]:hover {
+  border: 1px solid #fca311;
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 0 10px 10px white;
+          box-shadow: 0 10px 10px white;
+  background-color: #5a5f7c;
 }
 
-button{
-    transition: 0.5s;
+.inscription {
+  display: none;
 }
-button:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 10px 10px rgb(255, 255, 255);
-    background-color: rgb(90, 95, 124);
-}
+/*# sourceMappingURL=style.css.map */
