@@ -9,19 +9,22 @@ $db = new PDO('mysql:host=localhost;dbname=sebquizz', 'sebastien', 'sebastien')
 
 if (isset($_POST['anime'])) {
     $themeAnimation = $db->prepare("SELECT categorie, question, r1, r2, r3, r4, bReponse  FROM `question_seb` INNER JOIN theme ON theme.idTheme = question_seb.idTheme INNER JOIN reponse ON reponse.idReponse = question_seb.idReponse WHERE theme.idTheme = 1");
-} elseif (isset($_POST['gaming'])) {
+}
+if (isset($_POST['gaming'])) {
     $themeAnimation = $db->prepare("SELECT categorie, question, r1, r2, r3, r4, bReponse FROM `question_seb` INNER JOIN theme ON theme.idTheme = question_seb.idTheme INNER JOIN reponse ON reponse.idReponse = question_seb.idReponse WHERE theme.idTheme = 2");
-} elseif (isset($_POST['cinema'])) {
+}
+if (isset($_POST['cinema'])) {
     $themeAnimation = $db->prepare("SELECT categorie, question, r1, r2, r3, r4, bReponse FROM `question_seb` INNER JOIN theme ON theme.idTheme = question_seb.idTheme INNER JOIN reponse ON reponse.idReponse = question_seb.idReponse WHERE theme.idTheme = 3");
-} elseif (isset($_POST['tech'])) {
+}
+if (isset($_POST['tech'])) {
     $themeAnimation = $db->prepare("SELECT categorie, question, r1, r2, r3, r4, bReponse FROM `question_seb` INNER JOIN theme ON theme.idTheme = question_seb.idTheme INNER JOIN reponse ON reponse.idReponse = question_seb.idReponse WHERE theme.idTheme = 4");
 }
 
 $themeAnimation->execute();
 $result = $themeAnimation->fetchAll();
 
-$obj = json_encode($result, JSON_FORCE_OBJECT);
-return $obj;
+$obj = json_encode($result);
+// return $obj;
 
 if (isset($result)) {
     header('Location: ./principale.php');
