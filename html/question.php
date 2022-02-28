@@ -20,6 +20,9 @@ if (isset($_POST['anime'])) {
 $themeAnimation->execute();
 $result = $themeAnimation->fetchAll();
 
+$obj = json_encode($result, JSON_FORCE_OBJECT);
+return $obj;
+
 if (isset($result)) {
     header('Location: ./principale.php');
 } else {
